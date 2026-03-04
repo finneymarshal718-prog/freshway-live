@@ -16,7 +16,11 @@ app.listen(PORT, () => {
 
 // Discord Bot
 const client = new Client({
-  intents: [GatewayIntentBits.Guilds]
+  intents: [
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.MessageContent
+  ]
 });
 
 client.once("ready", () => {
