@@ -29,6 +29,7 @@ client.once("ready", () => {
 const prefix = "!";
 
 client.on("messageCreate", message => {
+  console.log("Message received:", message.content);
   if (message.author.bot) return;
   if (!message.content.startsWith(prefix)) return;
 
